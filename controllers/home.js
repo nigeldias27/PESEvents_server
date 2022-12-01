@@ -39,3 +39,12 @@ export const getEvent = async (req, res) => {
     res.status(400).send(e.message);
   }
 };
+
+export const deleteEvent = async (req, res) => {
+  try {
+    const event = await Event.findByIdAndDelete(req.body.id);
+    res.send("Deleted successfully!");
+  } catch (e) {
+    res.status(400).send(e.message);
+  }
+};

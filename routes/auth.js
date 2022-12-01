@@ -6,6 +6,7 @@ import {
   addEvent,
   getEvents,
   getEvent,
+  deleteEvent,
 } from "../controllers/index.js";
 
 const router = express.Router();
@@ -16,4 +17,5 @@ router.get("/getType/:email", getType);
 router.post("/addEvent", addEvent);
 router.get("/getAllEvents", getEvents);
 router.post("/getEvent", getEvent);
+router.post("/deleteEvent", deleteEvent);
 module.exports = router;
